@@ -1,7 +1,12 @@
 package br.com.rafaelportela.android.test;
 
 import android.test.ActivityInstrumentationTestCase2;
-import br.com.rafaelportela.android.*;
+import android.widget.TextView;
+
+import br.com.rafaelportela.android.HelloAndroidActivity;
+
+import static br.com.rafaelportela.android.R.id.hello_world_tv;
+
 
 public class HelloAndroidActivityTest extends ActivityInstrumentationTestCase2<HelloAndroidActivity> {
 
@@ -9,9 +14,13 @@ public class HelloAndroidActivityTest extends ActivityInstrumentationTestCase2<H
         super(HelloAndroidActivity.class); 
     }
 
-    public void testActivity() {
+    public void testActivity() throws InterruptedException {
         HelloAndroidActivity activity = getActivity();
-        assertNotNull(activity);
+        Thread.sleep(2000);
+
+        TextView text = (TextView) activity.findViewById(hello_world_tv);
+
+        assertEquals("Hello world!", text.getText().toString());
     }
 }
 
