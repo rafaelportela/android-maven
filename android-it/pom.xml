@@ -62,9 +62,9 @@
 						<!--</packages> -->
 					</test>
 					<sdk>
-						<platform>16</platform>
+						<platform>19</platform>
 					</sdk>
-									</configuration>
+				</configuration>
 				<extensions>true</extensions>
 			</plugin>
 		</plugins>

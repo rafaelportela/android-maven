@@ -59,9 +59,9 @@
 					<version>${android.plugin.version}</version>
 					<configuration>
 						<sdk>
-							<platform>16</platform>
+							<platform>19</platform>
 						</sdk>
-												<zipalign>
+						<zipalign>
 							<verbose>true</verbose>
 						</zipalign>
 						<undeployBeforeDeploy>true</undeployBeforeDeploy>
